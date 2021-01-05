@@ -14,10 +14,11 @@ public class TC_20 extends SFDC_Login {
 		leads();
 		quitBrowser();
 	}
-	public static void leads() {
+	public static void leads() throws InterruptedException {
 		//Click the leads links
 		WebElement leads= driver.findElement(By.xpath("//li[@id='Lead_Tab']/a"));
 		leads.click();
+		Thread.sleep(5000);
 		// close the popupbox
 				driver.findElement(By.id("tryLexDialogX")).click();
 		
